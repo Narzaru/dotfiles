@@ -1,0 +1,91 @@
+@import url("/home/narzaru/.config/themes/latte.css");
+
+/* Общие настройки */
+* {
+  min-height: 0;
+  min-width: 0;
+  font-family: inherit; 
+  font-size: inherit;
+  font-weight: 900;
+  color: @text;
+}
+
+/* Окно Waybar */
+window#waybar {
+  background-color: @base;
+  font-family: "JetBrainsMono Nerd Font"; 
+  font-size: 12px;
+  box-shadow: 10px 10px 10px 10px #ff0000;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/* Кнопки рабочих пространств */
+#workspaces button {
+  border-radius: 8px;
+  padding: 0.1em 0.5em;
+  min-width: 0.5em;
+  margin: 0.2em;
+}
+
+#workspaces button:hover,
+#workspaces button.focused:hover {
+  background-color: @surface2;
+}
+
+#workspaces button.focused {
+  background-color: @surface2;
+}
+
+#workspaces button.urgent {
+  background-color: @yellow;
+}
+
+#workspaces button.active {
+  background-color: @crust;
+}
+
+/* Настройка виджетов */
+#custom-arch,
+#clock,
+#pulseaudio,
+#custom-logo,
+#custom-power,
+#language,
+#tray {
+  padding: 0.1em 0.4em;
+  border-radius: 8px;
+  margin: 0.2em;
+  background-color: @crust;
+  color: @text;
+}
+
+/* Специфичные настройки для отдельных элементов */
+#custom-arch {
+  padding: 0.1em 0.6em 0.1em 0.4em;
+}
+
+#custom-power {
+  min-width: 15px;
+  margin-right: 4px;
+}
+
+#pulseaudio.muted {
+  color: @text;
+}
+
+/* Подсказки */
+tooltip, tooltip *, menu {
+  background-color: @base;
+  border: 2px solid @crust;
+  color: @text;
+  background-color: @crust;
+  padding: 0;
+}
+
+tooltip label, menu label {
+    text-shadow: none;
+}
+
